@@ -83,7 +83,7 @@ This virus did not show up in VirusTotal because VT has never seen the file! Eri
 1. Look in the Detections tab of LimaCharlie
 ![Alt text](https://i.imgur.com/JZ4pBTg.png)
 2. Make a new D&R rule for Shadow Copies Deletion. The action:report tells LimaCharlie to create a Detection report and the action:task is what will be used to block the attack by killing the parent process of the `vssadmin delete shadows /all` command. Run the `vssadmin delete shadows /all` command again and run `whoami`. Whoami didnt return anything because the D&R rule worked successfully. The rule terminated the parent process of `vssadmin delete shadows /all` making the shell hang and `whoami` not returning anything.
-![Alt text](ihttps://i.imgur.com/pBrA2zf.png)
+
 
 That's all folks!
 
