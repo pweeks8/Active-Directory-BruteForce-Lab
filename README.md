@@ -26,7 +26,7 @@ Credit goes to Eric Capuano for writing ["So you want to be a SOC Analyst?"](htt
 ## Step 3: Installing Sysmon (Windows VM)
 1. Download and install Sysmon to provide granular telemetry on Windows Endpoints.
 2. Download and install [SwiftOnSecurity](https://infosec.exchange/@SwiftOnSecurity) Sysmon config
-3. Validate Symon is running
+3. Validate Sysmon is running
 ![sysmon](https://i.imgur.com/gIDLhzw.png)
 ## Step 4: Installing LimaCharlie (Windows VM)
 1. Create a LimaCharlie account
@@ -60,7 +60,7 @@ This virus did not show up in VirusTotal because VT has never seen the file! Eri
 1. Look at the timeline of the Windows VM sensor and filter for "SENSITIVE_PROCESS_ACCESS". This will show the event where lsass was accessed.
 ![Alt text](https://i.imgur.com/2fRg32o.png)
 ![lsassevent](https://i.imgur.com/gwVpgdS.png)
-2. Create a D&R(Detection & Response) rule that will alert anytime this event occurs. This rule specifies that the detection will only look at SENSITIVE_PROGRESS_ACCESS where the process ends with lsass.exe. The response section generates a detection report with the name LSASS access.
+2. Create a D&R(Detection & Response) rule that will alert anytime this event occurs. This rule specifies that the detection will only look at SENSITIVE_PROCESS_ACCESS where the process ends with lsass.exe. The response section generates a detection report with the name LSASS access.
 ![d&rbutton](https://i.imgur.com/QBXZeeC.png)
 ![d&rrule](https://i.imgur.com/HtJu3e0.png)
 3. Test the new rul LSASS rule
