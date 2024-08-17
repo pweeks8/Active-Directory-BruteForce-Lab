@@ -71,25 +71,21 @@ This virus did not show up in VirusTotal because VT has never seen the file! Eri
 ## Step 11: Detect LSASS Accessed
 1. Run the procdump command again
 2. Look in the "Detections" tab of LimaCharlie. As you can see, our new rule worked, and the event is captured!
-![Alt text](https://i.imgur.com/BebmYh7.png)
+![Alt text](https://i.imgur.com/0Exlnax.png)
 
-## Step 12: Perform a ransomware attack! (Kinda)
+## Step 12: Perform a ransomware attack! (Almost)
 1. As Eric Capuano states in his post "Volume Shadow Copies provide a convenient way to restore individual files or even an entire file system to a previous state which makes it a very attractive option for recovering from a ransomware attack". So as an attacker, we are deleting the copies so there is no way to recover from the ransomware attack.
-2. Run the ``shell`` command
-![Alt text](images/shell.png)
-3. Run the ``vssadmin delete shadows /all`` command
-![Alt text](images/vssadmindelete.png)
-4. Run ``whoami``
-![Alt text](images/whoami.png)
+2. Run the ``shell`` command, run the ``vssadmin delete shadows /all`` command and run ``whoami``
+![Alt text](https://i.imgur.com/Km7lU2T.png)
+
 
 ## Step 13 Detect and Block the Attack
 1. Look in the Detections tab of LimaCharlie
-![Alt text](images/detectattack.png)
-2. Make a new D&R rule for Shadow Copies Deletion. The action:report tells LimaCharlie to create a Detection report and the action:task is what will be used to block the attack by killing the parent process of the `vssadmin delete shadows /all` command.
-![Alt text](images/d&rshadowcopies.png)
-1. Run the `vssadmin delete shadows /all` command again and run `whoami`. Whoami didnt return anything because the D&R rule worked successfully. The rule terminated the parent process of `vssadmin delete shadows /all` making the shell hang and `whoami` not returning anything.
-![Alt text](images/attackblocked.png)
+![Alt text](https://i.imgur.com/JZ4pBTg.png)
+2. Make a new D&R rule for Shadow Copies Deletion. The action:report tells LimaCharlie to create a Detection report and the action:task is what will be used to block the attack by killing the parent process of the `vssadmin delete shadows /all` command. Run the `vssadmin delete shadows /all` command again and run `whoami`. Whoami didnt return anything because the D&R rule worked successfully. The rule terminated the parent process of `vssadmin delete shadows /all` making the shell hang and `whoami` not returning anything.
+![Alt text](ihttps://i.imgur.com/pBrA2zf.png)
 
+That's all folks!
 
 
 
