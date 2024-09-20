@@ -1,27 +1,48 @@
-# SOC LimaCharlie Sliver Lab
-Credit goes to Eric Capuano for writing ["So you want to be a SOC Analyst?"](https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst-intro) and putting together this lab!
+# Active Directory Brute Force Lab
+Credit goes to MYDFIR for creating this project and putting together this lab! [MYDFIR Youtube Channel: Cybersecurity Projects Active Directory Project](https://www.youtube.com/watch?v=5OessbOgyEo&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=13))
 ### Learning Objective
-- Hands-on experience with EDR (Endpoint Detection and Response) and C2s (Command and Control)
+- Hands-on experience with Active Directory, Kali, and Splunk to target a host machine and brute force it's password, all while ingesting telemetry created into Splunk. 
+- using Windows Server 2019, Kali Linux (used "Crowbar" for brute force attack), Ubuntu (Splunk Server), Sysmon64, Splunk Universal Forwarder, Windows 10, Powershell, and Cmd Prompt. 
 
 ### Tools & Requirements
 1. VirtualBox or VMWare
 2. Windows VM
-3. Linux VM
-4. Sysmon
-5. LimaCharlie
-6. Sliver
+3. Windows Server VM
+4. Ubuntu VM
+5. Kali Linux VM
+6. Sysmon
+7. Splunk Enterprise
+8. Splunk Universal Forwarder
 
-## Step 1: Set up a Windows/Linux Server VM
+## Step 1: Create a network diagram for an eagle-eyed view of how everything will work. 
+![gpedit](https://imgur.com/SpcKAxi)
+
+## Step 2: Set up a Windows 10 Machine/Ubuntu Server/Windows Server/Kali Linux VM's
 1. Install VirtualBox
-2. Download and deploy a [Windows VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
-3. Download and deploy a [Linux Server VM](https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso).
+2. Download and deploy a [Windows Server 2019 VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
+3. Download and deploy a [Windows 10 VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
+4. Download and deploy a [Linux Server VM](https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso).
+5. Download and deploy a [Kali Linux Server VM](https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso).
 
-## Step 2: Disabling Windows Defender
-1. Disable Tamper Protection
-![Tamper Protection Disabled](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda8a8b73-5aeb-4fef-a93a-36ebe5e3e4a3_390x226.png)
-2. Disable Defender via Group Policy Editor 
- 
-![gpedit](https://i.imgur.com/ft4OAGz.png)
+## Step 2: Prep all VM's for HomeLab environment 
+1. Configure NAT Network
+![NAT Network Configured](https://i.imgur.com/q7GDZji.png)
+2. Change IP address on Linux VM
+ - Configure User Profile
+   ![gpedit](https://i.imgur.com/V2PCrYC.png)
+ - Ubuntu Install Successful
+   ![gpedit](https://i.imgur.com/R4XhHfh.png)
+ - Using commmand "ip a" found initial IP address.
+    ![gpedit](https://i.imgur.com/OzivsDH.png)
+ - Using command "sudo nano /etc/netplan/(press tab to auto complete)" to access netplan and reconfigure IP address.
+    ![gpedit](https://imgur.com/wXWS0kk)
+ - Match netplan to photo below.
+    ![gpedit](https://i.imgur.com/7dEXUcb.png)
+ - Save and apply netplan.
+    ![gpedit](https://i.imgur.com/eVoJeFA.png)
+ - Verify connectivity.
+    ![gpedit](https://i.imgur.com/Ezv7Q0w.png)
+   
 
 ## Step 3: Installing Sysmon (Windows VM)
 1. Download and install Sysmon to provide granular telemetry on Windows Endpoints.
