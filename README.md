@@ -14,8 +14,11 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 7. Splunk Enterprise
 8. Splunk Universal Forwarder
 
-## Step 1: Create a network diagram for an eagle-eyed view of how everything will work. 
-![gpedit](https://imgur.com/SpcKAxi)
+<p align="center">
+## Step 1: Create a network diagram for an eagle-eyed view of how everything will work.: <br/>
+<img src="https://imgur.com/SpcKAxi" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 
 ## Step 2: Set up a Windows 10 Machine/Ubuntu Server/Windows Server/Kali Linux VM's
 1. Install VirtualBox
