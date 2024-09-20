@@ -27,6 +27,7 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 5. Download and deploy a [Kali Linux Server VM](https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso).
 
 ## Step 2: Prep all VM's for HomeLab environment 
+
 1. Configure NAT Network
    ![gpedit](https://i.imgur.com/q7GDZji.png)
 2. Change IP address on Linux VM
