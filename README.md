@@ -28,7 +28,7 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 
 ## Step 2: Prep all VM's for HomeLab environment 
 1. Configure NAT Network
-![NAT Network Configured](https://i.imgur.com/q7GDZji.png)
+![gpedit](https://i.imgur.com/q7GDZji.png)
 2. Change IP address on Linux VM
  - Configure User Profile
    ![gpedit](https://i.imgur.com/V2PCrYC.png)
