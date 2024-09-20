@@ -14,11 +14,10 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 7. Splunk Enterprise
 8. Splunk Universal Forwarder
 
-<p align="center">
+
 ## Step 1: Create a network diagram for an eagle-eyed view of how everything will work.: <br/>
-<img src="https://imgur.com/SpcKAxi" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+  ![gpedit](https://i.imgur.com/SpcKAxi.png)
+
 
 ## Step 2: Set up a Windows 10 Machine/Ubuntu Server/Windows Server/Kali Linux VM's
 1. Install VirtualBox
@@ -36,15 +35,14 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
  - Ubuntu Install Successful
    ![gpedit](https://i.imgur.com/R4XhHfh.png)
  - Using commmand "ip a" found initial IP address.
-    ![gpedit](https://i.imgur.com/OzivsDH.png)
+   ![gpedit](https://i.imgur.com/OzivsDH.png)
  - Using command "sudo nano /etc/netplan/(press tab to auto complete)" to access netplan and reconfigure IP address.
-    ![gpedit](https://imgur.com/wXWS0kk)
  - Match netplan to photo below.
-    ![gpedit](https://i.imgur.com/7dEXUcb.png)
+   ![gpedit](https://i.imgur.com/7dEXUcb.png)
  - Save and apply netplan.
-    ![gpedit](https://i.imgur.com/eVoJeFA.png)
+   ![gpedit](https://i.imgur.com/eVoJeFA.png)
  - Verify connectivity.
-    ![gpedit](https://i.imgur.com/Ezv7Q0w.png)
+   ![gpedit](https://i.imgur.com/Ezv7Q0w.png)
    
 
 ## Step 3: Installing Sysmon (Windows VM)
