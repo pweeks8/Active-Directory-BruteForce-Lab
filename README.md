@@ -15,7 +15,7 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 8. Splunk Universal Forwarder
 
 
-## Step 1: Create a network diagram for an eagle-eyed view of how everything will work.: <br/>
+## Step 1: Create a network diagram for an eagle-eyed view of how everything will work.
   ![gpedit](https://i.imgur.com/SpcKAxi.png)
 
 
