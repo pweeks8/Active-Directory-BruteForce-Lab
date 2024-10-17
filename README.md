@@ -30,21 +30,26 @@ Credit goes to MYDFIR for creating this project and putting together this lab! [
 
 1. Configure NAT Network
    ![gpedit](https://i.imgur.com/q7GDZji.png)
-2. Change IP address on Linux VM
- - Configure User Profile
-   ![gpedit](https://i.imgur.com/V2PCrYC.png)
- - Ubuntu Install Successful
-   ![gpedit](https://i.imgur.com/R4XhHfh.png)
- - Using commmand "ip a" found initial IP address.
-   ![gpedit](https://i.imgur.com/OzivsDH.png)
- - Using command "sudo nano /etc/netplan/(press tab to auto complete)" to access netplan and reconfigure IP address.
- - Match netplan to photo below.
-   ![gpedit](https://i.imgur.com/7dEXUcb.png)
- - Save and apply netplan.
-   ![gpedit](https://i.imgur.com/eVoJeFA.png)
- - Verify connectivity.
-   ![gpedit](https://i.imgur.com/Ezv7Q0w.png)
-   
+2. Configure Splunk VM 
+   - Configure User Profile
+     ![gpedit](https://i.imgur.com/V2PCrYC.png)
+   - Ubuntu Install Successful
+     ![gpedit](https://i.imgur.com/R4XhHfh.png)
+   - Using commmand "ip a" found initial IP address.
+     ![gpedit](https://i.imgur.com/OzivsDH.png)
+   - Using command "sudo nano /etc/netplan/(press tab to auto complete)" to access netplan and reconfigure IP address.
+   - Match netplan to photo below.
+     ![gpedit](https://i.imgur.com/7dEXUcb.png)
+   - Save and apply netplan.
+     ![gpedit](https://i.imgur.com/eVoJeFA.png)
+   - Verify connectivity.
+     ![gpedit](https://i.imgur.com/Ezv7Q0w.png)
+   - Download and Install Splunk Enterprise by accessing download file through Vbox mounting.
+     ![gpedit](https://i.imgur.com/qQxlBlQ.png)
+     ![gpedit](https://i.imgur.com/m9fKMQ2.png)
+3. Configure Windows Target Machine VM
+   - 
+    
 
 ## Step 3: Installing Sysmon (Windows VM)
 1. Download and install Sysmon to provide granular telemetry on Windows Endpoints.
